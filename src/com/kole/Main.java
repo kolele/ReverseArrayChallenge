@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class Main {
 
     public static void main(String[] args) {
-        int[] forwardArray = new int[]{1,2,3};
+        int[] forwardArray = new int[]{1,2,3,4};
         reverse(forwardArray);
     }
 
