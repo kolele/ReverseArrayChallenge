@@ -1,19 +1,34 @@
 package com.kole;
 
-import java.util.Arrays;
 
 public class Main {
 
     public static void main(String[] args) {
-        int[] forwardArray = new int[]{1,2,3,4};
-        reverse(forwardArray);
+        int [] forwardArray = new int[]{14,4,5,7};
+        printArray(forwardArray);
+        printArray(reverse(forwardArray));
     }
 
-    public static void reverse(int[] array){
-        int[] reversedArray = new int[array.length];
-        for (int i= array.length-1;i>-1;i--){
-            reversedArray[array.length-1-i] = array[i];
+    public static int[] reverse(int[] array){
+        int[] tempArray = new int[array.length];
+        int tempCounter = array.length-1;
+        for (int i=0; i<array.length;i++){
+            tempArray[i] = array[tempCounter];
+            tempCounter--;
+        }return tempArray;
+    }
+
+    public static void printArray(int[] array){
+        System.out.println("******************************");
+        for (int i=0; i<array.length;i++){
+            System.out.println(array[i]);
         }
-        System.out.println(Arrays.toString(reversedArray));
+        System.out.println("******************************");
     }
 }
+
+//create temp array with length of passed array
+// create int that is one less than array length
+// init for loop
+// fill temparray with passed array elements at position of counter
+// reduce counter by one
